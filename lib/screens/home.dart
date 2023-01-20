@@ -36,62 +36,70 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 20,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                   Container(
-                      margin: EdgeInsets.only(right: 50.0,left: 0.0),
-                     child: Text(
-                  "HEIGHT",
-                  style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: accentHexColor),
-                   ),
-                   ),
+            Padding(
 
-                Container(
-                  width: 130,
-                  child: TextField(
-                    controller: _heightController,
-                    style: TextStyle(
-                      fontSize: 32,
-                      fontWeight: FontWeight.w300,
-                      color: accentHexColor,
-                    ),
-                    keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "feet",
-                      hintStyle: TextStyle(
-                          fontSize:20,
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                //height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                       Container(
+                          margin: EdgeInsets.only(right: 50.0,left: 0.0),
+                         child: Text(
+                      "HEIGHT",
+                      style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: accentHexColor),
+                       ),
+                       ),
+
+                    Container(
+                      width: 130,
+                      child: TextField(
+                        controller: _heightController,
+                        style: TextStyle(
+                          fontSize: 32,
                           fontWeight: FontWeight.w300,
-                          color: Colors.white.withOpacity(.8)),
+                          color: accentHexColor,
+                        ),
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "feet",
+                          hintStyle: TextStyle(
+                              fontSize:20,
+                              fontWeight: FontWeight.w300,
+                              color: Colors.white.withOpacity(.8)),
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                 Container(
-                  width: 130,
-                  child: TextField(
-                    controller: _inchesController,
-                    style: TextStyle(
-                      fontSize: 32,
-                      fontWeight: FontWeight.w300,
-                      color: accentHexColor,
-                    ),
-                    keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "Inches",
-                      hintStyle: TextStyle(
-                          fontSize: 20,
+                     Container(
+                      width: 80,
+                      child: TextField(
+                        controller: _inchesController,
+                        style: TextStyle(
+                          fontSize: 32,
                           fontWeight: FontWeight.w300,
-                          color: Colors.white.withOpacity(.8)),
+                          color: accentHexColor,
+                        ),
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Inches",
+                          hintStyle: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w300,
+                              color: Colors.white.withOpacity(.8)),
+                        ),
+                      ),
                     ),
-                  ),
+
+                  ],
                 ),
-                
-              ],
+              ),
             ),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                Container(
@@ -105,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
                    ),
                    ),
                    Container(
-                  width: 130,
+                  width: 90,
                   child: TextField(
                     controller: _weightController,
                     style: TextStyle(
